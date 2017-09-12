@@ -1,0 +1,141 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="container">
+    
+
+    <div class="omb_login">
+      <h3 class="omb_authTitle">Sign up</h3>
+      
+
+
+    
+    
+
+		
+
+		<div class="row row-sm-offset-3">
+			<div class="col-xs-12 col-sm-6">	
+			    <form class="omb_loginForm" id="form1" action="" autocomplete="off" method="POST">
+
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  <input type="text" class="form-control" name="name" #name placeholder="Full name">
+                </div>
+                <span class="help-block"></span>
+
+
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input type="email" class="form-control" name="username" #username placeholder="E-mail address">
+					</div>
+					<span class="help-block"></span>
+										
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+						<input  type="password" class="form-control" name="password" #password placeholder="Password">
+					</div>
+          <span class="help-block"></span>
+
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <input type="password" class="form-control" name="password1" #password1 placeholder="Re-enter password">
+            </div>
+            <span class="help-block">{{input_error}}</span>
+
+            
+
+					<button class="btn btn-lg btn-primary btn-block" value="submit" type="button" (click)="signup(name.value,username.value,password.value,password1.value)">Sign Up!</button>
+		
+					<button class="btn btn-lg btn-success btn-block" value="submit" type="button" (click)="signin()">Login</button>
+					
+				</form>
+        
+        
+        
+			</div>
+    	</div>
+		<!-- <div class="row omb_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-3">
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me">Remember Me
+				</label>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<p class="omb_forgotPwd">
+					<a href="#">Forgot password?</a>
+				</p>
+			</div>
+		</div>	    	 -->
+
+		<div class="row row-sm-offset-3 omb_loginOr">
+			<div class="col-xs-12 col-sm-6">
+				<hr class="omb_hrOr">
+				<span class="omb_spanOr">or</span>
+			</div>
+		</div>
+
+
+
+		<!-- <div class="row row-sm-offset-3 socialButtons">
+			
+			
+				<div class="col-xs-4 col-sm-2 col-md-2">
+				   
+					  <button type="button" class="btn btn-lg btn-block btn-facebook fa fa-facebook white-class" (click)="getfbLoginStatus()"></button>
+	
+				</div>
+				
+				<div class="col-xs-4 col-sm-2">
+				  <button type="button" class="btn btn-lg btn-block btn-twitter fa fa-twitter white-class" (click)="signup()"></button>
+				  
+			  </div>	
+			  
+				<div class="col-xs-4 col-sm-2">
+				  <button type="button" class="btn btn-lg btn-block btn-google fa fa-google-plus white-class" (click)="signin()"></button>
+				  
+				</div>	
+				
+				<div class="col-xs-4 col-sm-2">
+					<button type="button" class="btn btn-lg btn-block btn-linkedin fa fa-linkedin white-class" (click)="subscribeToLogout()"></button>
+					
+				  </div>
+			</div> -->
+
+			<div class="row row-sm-offset-4 socialButtons">
+				
+				
+					<div class="col-xs-3 col-sm-2 col-md-2">
+					   
+						  <button [disabled]="fb_button" type="button" class="btn btn-lg btn-block btn-facebook fa fa-facebook white-class" (click)="getfbLoginStatus()"></button>
+		
+					</div>
+					
+					<div class="col-xs-3 col-sm-2 col-md-2">
+					  <button type="button" class="btn btn-lg btn-block btn-twitter fa fa-twitter white-class" (click)="signup()"></button>
+					  
+				  </div>	
+				  
+					<div class="col-xs-3 col-sm-2 col-md-2">
+					  <button type="button" id="googleBtn" class="btn btn-lg btn-block btn-google fa fa-google-plus white-class" ></button>
+					  
+					</div>	
+		
+				
+					<div class="col-xs-3 col-sm-2 col-md-2">
+						<button type="button" class="btn btn-lg btn-block btn-linkedin fa fa-linkedin white-class" (click)="subscribeToisInitialized()"></button>
+						
+					  </div>
+					
+						
+						
+					
+					
+					
+			</div>	
+
+
+	</div>
+
+
+
+        </div>
